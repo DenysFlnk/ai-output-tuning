@@ -1,0 +1,25 @@
+from task.app.clients.anthropic_client import AnthropicAIClient
+from task.app.clients.openai_client import OpenAIClient
+from task.app.main import run
+
+# TODO:
+#  Try the `n` parameter with different models and see the results. With the parameter `n`, we can configure how many
+#       chat completion choices to generate for each input message
+#  User massage: Why is the snow white?
+
+openai_client = OpenAIClient('gpt-4o')
+anthropic_ai_client = AnthropicAIClient('claude-3-haiku-20240307')
+
+run(
+    #TODO:
+    # 1. Provide `deployment_name` with model from the list above👆
+    # 2. Use `n` parameter with value in range from 1 to 5! (with anthropic it won't work)
+    client=anthropic_ai_client,
+    n=3,
+    print_request=True,
+    print_only_content=False,
+)
+
+# Pay attention to the number of choices in the response!
+# If you have worked with ChatGPT, you have probably seen responses where ChatGPT offers you a choice between two
+# responses to select which one you prefer. This is done with the `n` parameter.
