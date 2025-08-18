@@ -11,17 +11,10 @@ from task.app.main import run
 #  User massage: Name a random animal
 
 
-openai_client = OpenAIClient('gpt-4o')
-anthropic_ai_client = AnthropicAIClient('claude-3-haiku-20240307')
-
 run(
     # TODO:
     #  1. Use `seed` parameter with value 42 (or whatever you want)
     #  2. Use `n` parameter with value 5 (with anthropic it won't work)
-    client=anthropic_ai_client,
-    seed=3241,
-    print_request=True,
-    print_only_content=False,
 )
 
 # Check the content in choices. The expected result is that in almost all choices the result will be the same.

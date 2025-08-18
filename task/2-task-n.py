@@ -7,17 +7,11 @@ from task.app.main import run
 #       chat completion choices to generate for each input message
 #  User massage: Why is the snow white?
 
-openai_client = OpenAIClient('gpt-4o')
-anthropic_ai_client = AnthropicAIClient('claude-3-haiku-20240307')
 
 run(
     #TODO:
     # 1. Provide `deployment_name` with model from the list above👆
     # 2. Use `n` parameter with value in range from 1 to 5! (with anthropic it won't work)
-    client=anthropic_ai_client,
-    n=3,
-    print_request=True,
-    print_only_content=False,
 )
 
 # Pay attention to the number of choices in the response!

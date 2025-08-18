@@ -7,16 +7,9 @@ from task.app.main import run
 #  User massage: What is token when we are working with LLM?
 
 
-openai_client = OpenAIClient('gpt-4o')
-anthropic_ai_client = AnthropicAIClient('claude-3-haiku-20240307')
-
 run(
     # TODO:
     #  Use `max_tokens` parameter with value 10
-    client=anthropic_ai_client,
-    max_tokens=10,
-    print_request=True,
-    print_only_content=False,
 )
 
 

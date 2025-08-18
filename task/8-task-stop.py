@@ -10,18 +10,12 @@ from task.app.main import run
 #       Default: None
 #  User massage: Explain the key components of a Large Language Model architecture
 
-openai_client = OpenAIClient('gpt-4o')
-anthropic_ai_client = AnthropicAIClient('claude-3-haiku-20240307')
 
 run(
     # TODO:
     #  1. Use `stop` parameter with value "\n\n"
     #  2. Use `stop` parameter with values ["**Embedding Layer**", "**Transformer Blocks**", "**Training**"]
     #  3. Optional: Set `print_only_content` as False to see the full JSON and what is the `finish_reason`
-    client=anthropic_ai_client,
-    stop_sequences= ["**Embedding Layer**", "**Transformer Blocks**", "**Training**"],
-    print_request=True,
-    print_only_content=False,
 )
 
 
