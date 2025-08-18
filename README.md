@@ -1,6 +1,6 @@
 # Work with different LLMs and parameters
 
-A Python implementation task to work with different LLMs (Large Language Models) and request parameters 
+A Python implementation task to work with different LLMs (Large Language Models) and request parameters
 
 ## 🎓 Learning Goals
 
@@ -46,8 +46,8 @@ By completing these tasks, you will learn:
    │   │   ├── base.py              ✅ Complete
    │   │   ├── openaai_client.py    ✅ Complete
    │   │   └── anthpoic_client.py   ✅ Complete
-   │   ├── main.py                  ✅ Complete
-   │   └── client.py                ✅ Complete
+   │   ├── constant.py              ✅ Complete
+   │   └── main.py                  ✅ Complete
    ├── 1-task-models.py             🚧 TODO
    ├── 2-task-n.py                  🚧 TODO
    ├── 3-task-temperature.py        🚧 TODO
@@ -61,12 +61,12 @@ By completing these tasks, you will learn:
 ## 📝 Your Tasks
 
 Implement all tasks from these files:
-- 1-task-models.py 
-- 2-task-n.py 
-- 3-task-temperature.py 
-- 4-task-seed.py     
-- 5-task-max_tokens.py   
-- 6-task-frequency_penalty.py 
+- 1-task-models.py
+- 2-task-n.py
+- 3-task-temperature.py
+- 4-task-seed.py
+- 5-task-max_tokens.py
+- 6-task-frequency_penalty.py
 - 7-task-presence_penalty.py
 - 8-task-stop.py     
 
