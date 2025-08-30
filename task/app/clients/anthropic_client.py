@@ -57,6 +57,6 @@ class AnthropicAIClient(AIClient):
                 print("=" * 109)
                 return Message(Role.AI, content)
             else:
-                return Message(Role.AI, '-')
+                return Message(Role.AI, '')
         else:
             raise Exception(f"HTTP {response.status_code}: {response.text}")
