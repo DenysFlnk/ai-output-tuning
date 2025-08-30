@@ -13,8 +13,8 @@ from task.app.main import run
 
 run(
     # TODO:
-    #  1. Use `stop` parameter with value "\n\n"
-    #  2. Use `stop` parameter with values ["**Embedding Layer**", "**Transformer Blocks**", "**Training**"]
+    #  1. Use `stop`(for OpenAI) and `stop_sequences` (for Anthropic) parameter with value "\n\n"
+    #  2. Use `stop`(for OpenAI) and `stop_sequences` (for Anthropic) parameter with values ["**Embedding Layer**", "**Transformer Blocks**", "**Training**"]
     #  3. Optional: Set `print_only_content` as False to see the full JSON and what is the `finish_reason`
 )
 
@@ -22,4 +22,3 @@ run(
 # With `stop` parameter we can stop content generation. It can be used for some policies/guardrails. For instance,
 # we are the company with the name `Pear` and we don't want that anybody will see in results that our competitor `Apple`
 # is cool (stop: ["Apple is cool", "Apple top"]).
-# The `finish_reason` will be set as `stop`. So, the users won't know what is the real reason why LLM has stopped generation.

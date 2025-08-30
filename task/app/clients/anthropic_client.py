@@ -47,15 +47,16 @@ class AnthropicAIClient(AIClient):
         if response.status_code == 200:
             data = response.json()
             content_blocks = data.get("content", [])
+            print("" + "=" * 50 + " RESPONSE " + "=" * 50)
+            if not print_only_content:
+                print(json.dumps(data, indent=2, sort_keys=True))
             if content_blocks:
                 content = "".join(block.get("text", "") for block in content_blocks if block.get("type") == "text")
-                print("" + "=" * 50 + " RESPONSE " + "=" * 50)
                 if print_only_content:
                     print(content)
-                else:
-                    print(json.dumps(data, indent=2, sort_keys=True))
                 print("=" * 109)
                 return Message(Role.AI, content)
-            raise ValueError("No content blocks present in the response")
+            else:
+                return Message(Role.AI, '-')
         else:
             raise Exception(f"HTTP {response.status_code}: {response.text}")
