@@ -70,3 +70,5 @@ Implement all tasks from these files:
 - 7-task-presence_penalty.py
 - 8-task-stop.py     
 
+## 💪 Additional task:
+Practice with other parameters from OpenAI and Anthropic. For instance OpenAI have `reasoning_effort` and Anthropic `thinking`, and there are many others like citations, etc...
